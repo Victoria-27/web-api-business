@@ -1,5 +1,5 @@
 import fs from 'fs';
-import Product from './product';
+import Product from './helper';
 function getProducts() : Product[]{
     const products = fs.readFileSync(__dirname+'/../database.json', {encoding:'utf8', flag:'r'});
     return JSON.parse(products);
@@ -28,7 +28,7 @@ function addProduct(newProduct: Product): Product {
     newProduct.dateUploaded = Date.now().toString();
     newProduct.dateEdited = Date.now().toString();
     products.push(newProduct);
-    fs.writeFileSync(__dirname+'/../database.json', JSON.stringify(products));
+    fs.writeFileSync(__dirname+'/../database.json', JSON.stringify(products,null,2));
     return newProduct;
 }
 
