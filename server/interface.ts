@@ -1,15 +1,14 @@
-interface Variety{
-    size: string,
-    color: string,
-    quantity: string,
-    images: string[],
-    price:string
+interface ProductInterface { 
+    productName: string; 
+    productId: string
+    productDescription: string; 
+    size: string; 
+    color: string; 
+    quantity: string; 
+    images: string[]; 
+    price: string; 
+    dateUploaded: string; 
+    dateEdited: string; 
 }
-export interface Product{
-    productId: number,
-    productName: string,
-    productDescription: string,
-    productVarieties: Variety[],
-    dateEdited:string,
-    dateUploaded:string
-}
+
+export { ProductInterface };  // export interface  Product
