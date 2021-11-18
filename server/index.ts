@@ -118,7 +118,7 @@ const server: Server = http.createServer(
   }
 );
 
-const PORT = process.env.PORT || 3005;
+const PORT = process.env.PORT || 3000;
 
 server.listen(PORT).on("listening", () => {
   console.log(`Server is listening on port ${PORT}...`);
