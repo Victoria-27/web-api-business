@@ -1,4 +1,4 @@
-import { ProductInterface } from "./interface";
+import { ProductInterface } from "./inteface";
 
 class Product {
     productName: string; 
